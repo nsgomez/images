@@ -1,6 +1,9 @@
 #!/bin/bash
 cd /home/container
 
+# Wait for the panel to attach
+sleep 2
+
 # Output Current Java Version
 java -version
 
@@ -12,5 +15,4 @@ MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
-sleep 2
 eval ${MODIFIED_STARTUP}
