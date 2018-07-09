@@ -13,7 +13,7 @@ RUN apt-get -qq -y update && \
         libspeex1 libtheora0 libvorbis0a libx11-6 libx11-data \
         libxau6 libxcb-render0 libxcb-shm0 libxcb1 libxdmcp6 \
         libxext6 libxrender1 libcurl3-gnutls libicu57 libxml2 \
-        libxslt1.1 sgml-base xml-core && \
+        libxslt1.1 sgml-base xml-core iproute2 && \
     apt-get clean
 
 RUN useradd -m -d /home/container container
