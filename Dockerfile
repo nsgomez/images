@@ -12,7 +12,8 @@ RUN apt-get -qq -y update && \
         libcairo2 libfontconfig1 libogg0 libpixman-1-0 \
         libspeex1 libtheora0 libvorbis0a libx11-6 libx11-data \
         libxau6 libxcb-render0 libxcb-shm0 libxcb1 libxdmcp6 \
-        libxext6 libxrender1 && \
+        libxext6 libxrender1 libcurl3-gnutls libicu57 libxml2 \
+        libxslt1.1 sgml-base xml-core && \
     apt-get clean
 
 RUN useradd -m -d /home/container container
