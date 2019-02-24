@@ -7,7 +7,7 @@ FROM debian:stable-slim
 
 LABEL author="Nelson Gomez" maintainer="nelson.gomez.msd@gmail.com"
 
-RUN apt update && apt -y install ca-certificates openssl binutils iproute2 \
+RUN apt update && apt -y install ca-certificates openssl binutils iproute2 iputils-ping mysql-client \
     && useradd -m -d /home/container container
 
 USER container
