@@ -7,7 +7,7 @@ FROM debian:stable-slim
 
 LABEL author="Nelson Gomez" maintainer="nelson.gomez.msd@gmail.com"
 
-RUN apt update && apt -y install ca-certificates openssl binutils \
+RUN apt update && apt -y install ca-certificates openssl binutils llvm \
     && useradd -m -d /home/container container
 
 USER container
