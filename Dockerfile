@@ -8,7 +8,7 @@ FROM ubuntu:rolling
 LABEL author="Nelson Gomez" maintainer="nelson.gomez.msd@gmail.com"
 
 RUN apt update && apt -y upgrade \
-    && apt -y install ca-certificates openssl binutils llvm \
+    && apt -y install ca-certificates openssl binutils llvm libgoogle-perftools4 \
     && useradd -m -d /home/container container
 
 USER container
