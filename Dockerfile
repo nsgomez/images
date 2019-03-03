@@ -3,11 +3,12 @@
 # Environment: Debian
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM debian:stable-slim
+FROM ubuntu:rolling 
 
 LABEL author="Nelson Gomez" maintainer="nelson.gomez.msd@gmail.com"
 
-RUN apt update && apt -y install ca-certificates openssl binutils llvm \
+RUN apt update && apt -y upgrade \
+    && apt -y install ca-certificates openssl binutils llvm \
     && useradd -m -d /home/container container
 
 USER container
