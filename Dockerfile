@@ -8,7 +8,7 @@ FROM ubuntu:rolling
 LABEL author="Nelson Gomez" maintainer="nelson.gomez.msd@gmail.com"
 
 RUN apt update && apt -y upgrade \
-    && apt -y install ca-certificates openssl binutils llvm heaptrack libasan4 libasan5 \
+    && apt -y install ca-certificates openssl binutils llvm heaptrack libasan4 libasan5 libubsan1 \
     && useradd -m -d /home/container container
 
 USER container
